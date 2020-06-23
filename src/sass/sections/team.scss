@@ -1,0 +1,166 @@
+.team-container {
+  border-bottom: 0.125rem solid $context-grey;
+  padding-bottom: 5.125rem;
+}
+
+.title {
+  text-align: center;
+  padding-bottom: 3.875rem;
+}
+
+.title-text {
+  display: block;
+  font-size: 1.5rem;
+  font-family: $cursive-title;
+  color: $title-grey;
+  line-height: 1.75rem;
+  font-weight: 300;
+  text-align: center;
+  text-transform: none;
+  margin-bottom: 1.125rem;
+}
+
+.section-title {
+  display: block;
+  font-family: $title-text;
+  color: $title-grey;
+  font-weight: 700;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 3.875rem;
+  height: 0.25rem;
+  background-color: $red;
+  text-align: center;
+  margin: 2.5rem auto 0;
+}
+
+.team-description {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+  padding-bottom: 5.625rem;
+  text-align: center;
+}
+
+.card-box {
+  background-color: $marine;
+}
+
+.team__item-card {
+  max-width: 23.875rem;
+  margin-bottom: 1.75rem;
+  position: relative;
+  -webkit-transition: -webkit-transform .2s linear;
+  transition: -webkit-transform .2s linear;
+  -o-transition: transform .2s linear;
+  transition: transform .2s linear;
+  transition: transform .2s linear, -webkit-transform .2s linear;
+
+  &:hover,
+  &:focus {
+    -webkit-transform: translate(-0.625rem, -0.625rem);
+    -ms-transform: translate(-0.625rem, -0.625rem);
+    transform: translate(-0.625rem, -0.625rem);
+  }
+
+  &:hover .overlay,
+  &:focus .overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.team__item--name {
+  font-family: $title-text;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: $title-grey;
+}
+
+.team__item--profession {
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+}
+
+/* OVERLAY */
+.overlay {
+  background-image: -o-linear-gradient(bottom, rgba(252, 227, 138, .9), rgba(243, 129, 129, .9));
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(252, 227, 138, .9)), to(rgba(243, 129, 129, .9)));
+  background-image: linear-gradient(to top, rgba(252, 227, 138, .9), rgba(243, 129, 129, .9));
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.overlay__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 3.625rem;
+}
+
+.overlay__list--item {
+  display: flex;
+  width: 3.625rem;
+  height: 3.625rem;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(252, 227, 138);
+  -webkit-transition: .2s linear;
+  -o-transition: .2s linear;
+  transition: .2s linear;
+
+  &:hover,
+  &:focus {
+    background-color: $red;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+  }
+
+  &:hover .overlay-icon,
+  &:focus .overlay-icon {
+    fill: rgb(252, 227, 138);
+  }
+}
+
+.overlay__list--item:not(:last-child) {
+  margin-right: 0.0625rem;
+}
+
+
+.overlay-icon {
+  width: 1.75rem;
+  height: 1.75rem;
+  fill: $red;
+}
