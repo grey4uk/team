@@ -8,6 +8,17 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+package-lock.json
+.babelrc
+.browserslistrc
+.editorconfig
+.gitattributes
+.prettierrc
+.stylelintrc
+banner.png
+gulpfile.js
+
+
 # build artifacts
 # build/
 
@@ -37,6 +48,7 @@ bower_components
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
+build/
 
 # Dependency directories
 node_modules/
